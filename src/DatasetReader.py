@@ -2,10 +2,10 @@ import csv
 import src.Normalizer as nm
 
 
-def read(path):
+def read():
     oX = []
     oY = []
-    with open(path) as csvDataFile:
+    with open('data.csv') as csvDataFile:
         csvReader = csv.reader(csvDataFile)
         header = False
         for row in csvReader:

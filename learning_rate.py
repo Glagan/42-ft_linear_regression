@@ -1,16 +1,11 @@
 import sys
-import csv
-import math
 import matplotlib.pyplot as plt
 import src.GradientDescent as gd
 import src.Normalizer as nm
 import src.DatasetReader as dr
 
 # Dataset
-dataset = 'data.csv'
-if len(sys.argv) == 2:
-    dataset = sys.argv[1]
-oX, oY, X, Y = dr.read(dataset)
+oX, oY, X, Y = dr.read()
 
 # Run Gradient Descent for different learning rates
 reports = []
