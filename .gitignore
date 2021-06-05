@@ -4,3 +4,4 @@
 train
 estimate
 theta.res
+__pycache__

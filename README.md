@@ -51,6 +51,7 @@ python learning_rate.py
 	* Feature Scaling
 		* https://en.wikipedia.org/wiki/Feature_scaling#Standardization
 		* https://stackoverflow.com/questions/32108179/linear-regression-normalization-vs-standardization
+		* https://stackoverflow.com/a/59016254/7794671 with https://ibb.co/178qWcQ
 * 42-AI
 	* https://github.com/42-AI/bootcamp_machine-learning
 * Python
