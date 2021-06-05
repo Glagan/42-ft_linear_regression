@@ -1,0 +1,6 @@
+.vscode
+*.o
+.cpp
+train
+estimate
+theta.res
