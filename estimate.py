@@ -3,7 +3,11 @@ import sys
 # Find mileage, as a parameter or taken as an input
 if len(sys.argv) != 2:
     mileageStr = input('Mileage: ')
-    mileage = float(mileageStr)
+    try:
+        mileage = float(mileageStr)
+    except ValueError:
+        print('{} is not a valid number !'.format(mileageStr))
+        exit()
 else:
     mileage = float(sys.argv[1])
 

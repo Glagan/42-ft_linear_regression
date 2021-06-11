@@ -13,16 +13,17 @@ errors = []
 steps = [0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1]
 for step in steps:
     descent = gd.GradientDescent(X, Y, step, 1000)
-    theta0, theta1, currentErrors = descent.run()
+    theta0norm, theta1norm, currentErrors = descent.run()
+    theta0, theta1 = nm.minMaxDenormalize(X, Y, oX, oY, theta0norm, theta1norm)
     reports.append([theta0, theta1, step])
     errors.append(currentErrors)
 
 # Mileage and price plot
 plt.subplot(211)
-plt.xlabel('Normalized Price')
-plt.ylabel('Normalized Mileage')
-plt.scatter(X, Y, color='blue')
-xMin, xMax = min(X), max(X)
+plt.xlabel('Mileage')
+plt.ylabel('Price')
+plt.scatter(oX, oY, color='blue')
+xMin, xMax = min(oX), max(oX)
 for report in reports:
     plt.plot([xMin, xMax], [report[0] + (report[1] * xMin),
                             report[0] + (report[1] * xMax)], label="α = {}".format(report[2]))

@@ -26,12 +26,12 @@ except IOError:
 
 # Mileage and price plot
 plt.subplot(211)
-plt.xlabel('Normalized Price')
-plt.ylabel('Normalized Mileage')
-plt.scatter(X, Y, color='blue')
-xMin, xMax = min(descent.X), max(descent.X)
-plt.plot([xMin, xMax], [theta0norm + (theta1norm * xMin),
-                        theta0norm + (theta1norm * xMax)])
+plt.xlabel('Mileage')
+plt.ylabel('Price')
+plt.scatter(oX, oY, color='blue')
+xMin, xMax = min(oX), max(oX)
+plt.plot([xMin, xMax], [theta0 + (theta1 * xMin),
+                        theta0 + (theta1 * xMax)])
 
 # Cost over iterations
 plt.subplot(212)
